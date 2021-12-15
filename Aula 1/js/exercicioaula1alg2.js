@@ -13,6 +13,7 @@ let soma
 let menor
 let maior
 let media
+let numero
 
 let quantidade = Number(prompt("Informe quantos numeros serão capturados:"))
 
