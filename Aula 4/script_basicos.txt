@@ -7,4 +7,4 @@ select * from pessoas
 -para inserir dados em uma tabela utilizar o comando INSERT INTO + o nome da tabela
 -- -informar quais colunas deseja preencher 
 --e respectivamente informar os valores após o comando VALUES
-insert into pessoas (nome,idade)  values ("Rubem Oliota",32)
+insert into pessoas (nome,idade)  values ("Enrico Reichow",17)
