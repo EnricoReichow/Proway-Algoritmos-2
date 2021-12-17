@@ -18,3 +18,42 @@ create table usuario(
     obs text
 );
 
+select * from usuario
+
+--inserir 4 usuarios na tabela para exercitar campos obrigatórios e campos opcionais
+
+insert into usuario (nome, email, senha, obs) values ("Enrico Reichow","enricobernzreichow@gmail.com","trolei1234","zika do baile")
+insert into usuario (nome, email, senha) values ("Joao","joaoperrr@hotmail.com","gostodeabacate")
+insert into usuario (nome, email, senha, obs) values ("Augusto","augustooliveira@gmail.com","augustin987","adoro gatos")
+insert into usuario (nome, email, senha) values ("Ricardo","ricardingameplays@gmail.com","minecraft4321")
+
+select *from usuario
+where 
+id = 4
+
+update usuario
+set
+nome = "Otavio",
+email = "otavinho@gameplay.com",
+obs = "bem melhor"
+where
+id = 4
+
+insert into pessoas (nome,idade) values("Rubem",32);
+insert into pessoas (nome,idade) values("Oliota",23);
+insert into pessoas (nome,idade) values("Tester",18);
+insert into pessoas (nome,idade) values("Junin",17);
+insert into pessoas (nome,idade) values("Plenin",20);
+insert into pessoas (nome,idade) values("Senin",25);
+insert into pessoas (nome,idade) values("Master",70);
+
+select * from pessoas
+
+update pessoas
+set
+idade = 18
+select * from pessoas
+where
+nome like "%n"
+
+drop table medrop --apagar tabela
