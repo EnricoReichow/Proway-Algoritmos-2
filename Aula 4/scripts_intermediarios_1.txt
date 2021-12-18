@@ -1,0 +1,51 @@
+select * from usuarios 
+
+insert into usuarios(nome, email, senha) values ("Enrico Reichow", "ebrs@gmail.com","*****");
+insert into usuarios(nome, email, senha) values ("Ramon Dino", "dinoramon@gmail.com","amoaIntegral");
+insert into usuarios(nome, email, senha) values ("Leo Stronda", "vemcomomonstro@gmail.com","batatadoce");
+insert into usuarios(nome, email, senha) values ("Enrico Reichow", "rafaelbrandao@gmail.com","soubempago123");
+--id 2 é o ricardinho
+
+select * from telefones;
+
+insert into telefones (tipo, numero_completo, usuario_id) 
+values ("residencial", "(47) 9 8888 7777",2)
+
+select * from usuarios 
+left join telefones on telefones.usuario_id = usuarios.id;
+--o inner join é um tipo de relacionamento restrito onde os valores comparados
+--devem existir em ambas as tabelas
+
+--o left join é um tipo de relacionamento menos restritivo
+--onde basta existir dados na tabela principal dessa forma os dados da tabela secundaria
+--ficarão nulos (mas os resultados são exibidos em linha)
+
+select 
+    usu.nome as usuarios,
+    usu.email as "e-mail",
+    usu.senha as password,
+    tel.tipo as type,
+    tel.numero_completo as number
+from usuarios as usu 
+    left join telefones as tel on tel.usuario_id = usu.id
+where 
+tel.numero_completo like "%2"
+and tel.numero_completo like "08%"
+    
+insert into telefones (tipo, numero_completo, usuario_id )
+values ("comercial", "0800-333-2322", 7);
+
+--criar 2 tabelas 
+--1ª tabela series com os campos
+--ID bla bla bla
+--nome...
+--ano...
+--diretor...
+--genero...
+
+--2ª tabela EPISODIOS
+--ID bla bla bla
+--titulo obrigatório
+--sequencia obrigatório
+--descrição
+--serie_id

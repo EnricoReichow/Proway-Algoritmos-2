@@ -57,3 +57,9 @@ where
 nome like "%n"
 
 drop table medrop --apagar tabela
+
+select *
+from usuarios
+inner join telefones on telefones.usuarios_id = usuarios.id;
+--o inner é um tipo de relacionamento restrito onde os valores comparados
+--devem existir em ambas as tabelas

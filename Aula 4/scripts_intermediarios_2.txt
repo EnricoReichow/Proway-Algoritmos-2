@@ -1,0 +1,27 @@
+select * from series
+
+select * from episodios
+
+insert into series (nome,ano,genero) values ("Atack on Titan","2010","Anime");
+insert into series (nome,ano,genero) values ("iCarly","2008","Comedia");
+insert into series (nome,ano,genero) values ("Viking","2018","Ação");
+insert into series (nome,ano,genero) values ("Jessica Jones","2017","Ação");
+
+--para fazer contagens ou (Agrupadores) é necessário informar quais campos se repetem
+--e esses campos devem ser os unicos presentes no select 
+--os demais campos são os de agrupamento
+select genero,count(*) from series
+group by genero
+;
+
+--id 2 em series é Lost
+
+select * from series as ser
+inner join episodios as ep on ep.serie_id = ser.id
+where ser.id=2
+order by ep.sequencia desc;
+
+select * from series as ser
+left join episodios as ep on ep.serie_id = ser.id
+order by ser.nome,ser.ano;
+
